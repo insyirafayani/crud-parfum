@@ -40,7 +40,6 @@ Beberapa teknologi yang digunakan dalam project ini:
 * Laravel
 * MySQL
 * Laragon
-* Blade Template
 
 ---
 
