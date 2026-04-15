@@ -97,5 +97,4 @@ Project ini masih sederhana dan bisa dikembangkan lagi, misalnya dengan menambah
 ## Pembuat
 
 Nama  : Insyira Fayani 
-NIM   : 240180102
 Kelas : A3
