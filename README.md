@@ -59,22 +59,118 @@ Tabel yang dipakai yaitu `parfums`, dengan field:
 
 ---
 
-## Cara Menjalankan Project
+## Instalasi dan Menjalankan Aplikasi
 
-Langkah-langkah menjalankan project:
+Berikut langkah-langkah untuk menginstall sekaligus menjalankan aplikasi CRUD Parfum menggunakan Laravel di komputer lokal:
 
-1. Jalankan Laragon terlebih dahulu
+---
 
-2. Masuk ke folder project melalui terminal
+### 1. Clone Repository
 
-3. Jalankan perintah:
-   php artisan serve
+Download project dari GitHub:
 
-4. Buka browser dan akses:
-   http://127.0.0.1:8000/parfum
+```bash
+git clone https://github.com/insyirafayani/crud-parfum.git
+```
 
-Atau bisa juga melalui:
+Masuk ke folder project:
+
+```bash
+cd crud-parfum
+```
+
+---
+
+### 2. Install Dependency
+
+Install semua kebutuhan Laravel:
+
+```bash
+composer install
+```
+
+---
+
+### 3. Konfigurasi Environment
+
+Copy file `.env.example` menjadi `.env`:
+
+```bash
+cp .env.example .env
+```
+
+Kemudian buka file `.env` dan sesuaikan database:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=db_parfum
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+Pastikan database **db_parfum** sudah dibuat di phpMyAdmin.
+
+---
+
+### 4. Generate Key Aplikasi
+
+```bash
+php artisan key:generate
+```
+
+---
+
+### 5. Migrasi Database
+
+```bash
+php artisan migrate
+```
+
+Perintah ini akan membuat tabel di database sesuai struktur yang sudah dibuat.
+
+---
+
+### 6. Menjalankan Server
+
+```bash
+php artisan serve
+```
+
+---
+
+### 7. Akses Aplikasi
+
+Buka browser dan akses:
+
+```text
+http://127.0.0.1:8000/parfum
+```
+
+Jika menggunakan Laragon, bisa juga:
+
+```text
 http://parfum-app.test/parfum
+```
+
+---
+
+### 8. Catatan
+
+* Pastikan Laragon dalam kondisi **Running**
+* Aktifkan Apache dan MySQL
+* Jika terjadi error, jalankan:
+
+```bash
+php artisan config:clear
+php artisan cache:clear
+```
+
+---
+
+Dengan mengikuti langkah-langkah di atas, aplikasi dapat langsung dijalankan dan digunakan.
+
 
 ---
 
